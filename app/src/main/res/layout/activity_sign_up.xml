@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:id="@+id/imageViewLogoSignUp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/app_logo"
+        android:src="@drawable/ic_unicase_logo2" />
+
+    <TextView
+        android:id="@+id/textViewNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewLogoSignUp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:text="Name"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/editTextNameSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNameLabel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/textViewEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNameSignUp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="6dp"
+        android:text="Email"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/editTextEmailSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewEmailLabel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/textViewPasswoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmailSignUp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="6dp"
+        android:text="Password"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/editTextPasswordSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPasswoLabel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/textViewConfirmPasswordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPasswordSignUp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="6dp"
+        android:text="Confirm Password"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/editTextConfirmPasswordSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewConfirmPasswordLabel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:padding="12dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextConfirmPasswordSignUp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:text="Saya setuju dengan " />
+
+    <TextView
+        android:id="@+id/textViewTermsLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/checkBoxTerms"
+        android:layout_alignBaseline="@id/checkBoxTerms"
+        android:text="syarat dan ketentuan"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxTerms"
+        android:layout_marginTop="24dp"
+        android:text="Sign Up"
+        android:background="@drawable/rounded_button_background"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/blue" />
+
+    <LinearLayout
+        android:id="@+id/signInPromptContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already account? " />
+
+        <TextView
+            android:id="@+id/textViewSignInLinkFromSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

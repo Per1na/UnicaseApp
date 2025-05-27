@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".WelcomeActivity">
+
+    <LinearLayout
+        android:id="@+id/imageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="480dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1.2"
+            android:contentDescription="Gambar Utama"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gambar_ws1"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.RoundedImage" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="242dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="Gambar Kedua"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gambar_ws2"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.App.RoundedImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:contentDescription="Gambar Ketiga"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gambar_ws3"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.App.RoundedImage" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewWelcomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Welcome to"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageViewAdditional"
+        android:layout_width="162dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textViewWelcomeTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Deskripsi gambar tambahan"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_unicase_logo2" />
+
+    <TextView
+        android:id="@+id/textViewWelcomeSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_above="@+id/buttonGetStarted"
+        android:layout_below="@id/imageViewAdditional"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="19dp"
+        android:gravity="center"
+        android:text="Phone Case, Your Style!\nDesign it yourself or choose from our awesome collection."
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSignInLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewAlreadyHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? "
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewSignInLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linearLayoutSignInLink"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/blue"
+        android:background="@drawable/rounded_button_background"
+        android:text="Let Get Started"
+        android:textColor="@android:color/white"
+        app:cornerRadius="25dp" />
+
+</RelativeLayout>

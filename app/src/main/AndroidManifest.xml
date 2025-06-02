@@ -10,26 +10,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UnicaseApp"
+        android:theme="@style/Theme.UnicaseApp."
         tools:targetApi="31">
 
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.UnicaseApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@style/Theme.UnicaseApp"> <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
 
         <activity
             android:name=".WelcomeActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".SignInActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.UnicaseApp" /> <activity
+        android:name=".SignInActivity"
+        android:exported="false" />
 
         <activity
             android:name=".SignUpActivity"
@@ -38,6 +36,7 @@
         <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false"
+            android:label="Forgot Password"
             android:parentActivityName=".SignInActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -47,17 +46,16 @@
         <activity
             android:name=".HomeActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"/>
-
-        <activity
-            android:name=".TermsConditionsActivity"
-            android:exported="false"
-            android:label="Terms &amp; Conditions"
-            android:parentActivityName=".SignUpActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SignUpActivity" />
-        </activity>
+            android:label="@string/title_home"
+            android:theme="@style/Theme.UnicaseApp"/> <activity
+        android:name=".TermsConditionsActivity"
+        android:exported="false"
+        android:label="Terms &amp; Conditions"
+        android:parentActivityName=".SignUpActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".SignUpActivity" />
+    </activity>
 
         <activity
             android:name=".VerifyCodeActivity"
@@ -82,6 +80,227 @@
         <activity
             android:name=".PasswordResetSuccessActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false"
+            android:label="Search"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
+
+        <activity
+            android:name=".BrowserProductActivity"
+            android:exported="false"
+            android:label="Search Results" android:parentActivityName=".SearchActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SearchActivity" />
+        </activity>
+
+        <activity
+            android:name=".ProductDetailActivity"
+            android:exported="false"
+            android:label="Product Detail"
+            android:parentActivityName=".HomeActivity"> <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ProductReviewsActivity"
+            android:exported="false"
+            android:label="Reviews"
+            android:parentActivityName=".ProductDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProductDetailActivity" />
+        </activity>
+
+        <activity
+            android:name=".ShoppingCartActivity"
+            android:exported="false"
+            android:label="Shopping Cart" />
+
+        <activity
+            android:name=".CheckoutActivity"
+            android:exported="false"
+            android:label="Checkout"
+            android:parentActivityName=".ShoppingCartActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShoppingCartActivity" />
+        </activity>
+        <activity
+            android:name=".AddressListActivity"
+            android:exported="false"
+            android:label="Address List"
+            android:parentActivityName=".CheckoutActivity"> <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".CheckoutActivity" />
+        </activity>
+        <activity
+            android:name=".AddAddressActivity"
+            android:exported="false"
+            android:label="Add Address"
+            android:parentActivityName=".AddressListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AddressListActivity" />
+        </activity>
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false"
+            android:label="Payment"
+            android:parentActivityName=".CheckoutActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CheckoutActivity" />
+        </activity>
+        <activity
+            android:name=".TransactionDetailActivity"
+            android:exported="false"
+            android:label="Transaction Detail"
+            android:parentActivityName=".TransactionHistoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TransactionHistoryActivity" />
+        </activity>
+
+        <activity
+            android:name=".TransactionHistoryActivity"
+            android:exported="false"
+            android:label="Transaction History"
+            android:parentActivityName=".ProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProfileActivity" />
+        </activity>
+        <activity
+            android:name=".TrackOrderActivity"
+            android:exported="false"
+            android:label="Track Order"
+            android:parentActivityName=".TransactionHistoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TransactionHistoryActivity" />
+        </activity>
+
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false"
+            android:label="Notifications" />
+
+        <activity
+            android:name=".CustomCaseOptionsActivity"
+            android:exported="false"
+            android:label="Custom Your Case"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
+        <activity
+            android:name=".CustomizeCaseActivity"
+            android:exported="false"
+            android:label="Customize Design"
+            android:parentActivityName=".CustomCaseOptionsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CustomCaseOptionsActivity" />
+        </activity>
+        <activity
+            android:name=".PreviewCustomCaseActivity"
+            android:exported="false"
+            android:label="Preview Custom Case"
+            android:parentActivityName=".CustomizeCaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CustomizeCaseActivity" />
+        </activity>
+
+        <activity
+            android:name=".WishlistActivity"
+            android:exported="false"
+            android:label="Wishlist" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:label="Profile" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"
+            android:label="Edit Profile"
+            android:parentActivityName=".ProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProfileActivity" />
+        </activity>
+        <activity
+            android:name=".ChangeNameActivity"
+            android:exported="false"
+            android:label="Change Name"
+            android:parentActivityName=".EditProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EditProfileActivity" />
+        </activity>
+        <activity
+            android:name=".ChangeEmailActivity"
+            android:exported="false"
+            android:label="Change Email"
+            android:parentActivityName=".EditProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EditProfileActivity" />
+        </activity>
+        <activity
+            android:name=".ChangePhoneNumberActivity"
+            android:exported="false"
+            android:label="Change Phone Number"
+            android:parentActivityName=".EditProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EditProfileActivity" />
+        </activity>
+        <activity
+            android:name=".ChangeGenderActivity"
+            android:exported="false"
+            android:label="Change Gender"
+            android:parentActivityName=".EditProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EditProfileActivity" />
+        </activity>
+        <activity
+            android:name=".ChangeBirthDateActivity"
+            android:exported="false"
+            android:label="Change Birth Date"
+            android:parentActivityName=".EditProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EditProfileActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="Settings"
+            android:parentActivityName=".ProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProfileActivity" />
+        </activity>
+        <activity
+            android:name=".ConfirmCurrentPasswordActivity"
+            android:exported="false"
+            android:label="Change Password"
+            android:parentActivityName=".SettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SettingsActivity" />
+        </activity>
 
     </application>
 

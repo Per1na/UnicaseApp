@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">UnicaseApp</string>
     <string name="app_logo">Unicase</string>
+    <string name="title_home">Unicase</string>
 </resources>

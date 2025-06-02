@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.NamaAplikasiAnda" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.UnicaseApp."
+           parent="Theme.MaterialComponents.DayNight.DarkActionBar">
     </style>
 
     <style name="ShapeAppearance.App.RoundedImage" parent="">

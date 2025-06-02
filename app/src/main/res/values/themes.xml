@@ -1,4 +1,6 @@
 <resources>
-    <style name="Theme.UnicaseApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.UnicaseApp"
+           parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorSurface">@color/white</item>
     </style>
 </resources>

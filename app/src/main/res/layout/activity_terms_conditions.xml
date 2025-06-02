@@ -27,6 +27,6 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:lineSpacingExtra="4dp"
-            android:text="@string/terms_and_conditions_content" />
+            android:text="terms_and_conditions_content" />
     </LinearLayout>
 </ScrollView>
